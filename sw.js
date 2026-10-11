@@ -1,5 +1,5 @@
 /* Skorton service worker: offline-first untuk app shell (satu file HTML + aset PWA). */
-var CACHE = 'skorton-v202610111451';
+var CACHE = 'skorton-v202610111452';
 var CORE = [
   '/',
   '/index.html',
