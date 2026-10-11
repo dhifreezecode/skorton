@@ -84,16 +84,28 @@
     .section{padding:32px 0}
     .home-end{margin-top:24px;margin-bottom:36px}
     /* Keep every primary scoring/action control on the final volt palette, even when a browser forces dark styling. */
-    .nav-btn.primary,.btn-main,.score-add,.play-match{
+    .nav-btn.primary,.btn-main,.play-match{
       background-color:var(--volt)!important;background-image:none!important;border-color:var(--volt)!important;
       color:var(--volt-ink)!important;-webkit-text-fill-color:var(--volt-ink)!important;
       -webkit-appearance:none;appearance:none;color-scheme:light;forced-color-adjust:none;box-shadow:none!important
     }
-    .nav-btn.primary:hover,.nav-btn.primary:focus-visible,.btn-main:hover,.btn-main:focus-visible,.score-add:hover,.score-add:focus-visible,.play-match:hover,.play-match:focus-visible{
+    .nav-btn.primary:hover,.nav-btn.primary:focus-visible,.btn-main:hover,.btn-main:focus-visible,.play-match:hover,.play-match:focus-visible{
       background-color:#d5ff63!important;background-image:none!important;border-color:#d5ff63!important;color:var(--volt-ink)!important;-webkit-text-fill-color:var(--volt-ink)!important
     }
-    .nav-btn.primary:active,.btn-main:active,.score-add:active,.play-match:active{
+    .nav-btn.primary:active,.btn-main:active,.play-match:active{
       background-color:#baf020!important;background-image:none!important;border-color:#baf020!important;color:var(--volt-ink)!important;-webkit-text-fill-color:var(--volt-ink)!important
+    }
+    /* Scoring buttons must be volt before interaction, not only while focused or active. */
+    button.score-add,
+    button.score-add:hover,
+    button.score-add:focus,
+    button.score-add:focus-visible{
+      background:#c9ff38!important;border-color:#c9ff38!important;color:#153300!important;
+      -webkit-text-fill-color:#153300!important;-webkit-appearance:none!important;appearance:none!important;
+      color-scheme:light;forced-color-adjust:none;box-shadow:none!important;opacity:1
+    }
+    button.score-add:active{
+      background:#baf020!important;border-color:#baf020!important;color:#153300!important;-webkit-text-fill-color:#153300!important
     }
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
     @media print{.topbar,.result-actions,.footer{display:none!important}body{background:#fff}.result-card{box-shadow:none}}
