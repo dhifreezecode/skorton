@@ -2,7 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://skorton.pandigi.id/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://skorton.pandigi.id/panduan/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://skorton.pandigi.id/panduan/aturan-servis-badminton/</loc><lastmod>2026-10-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://skorton.pandigi.id/panduan/cara-membuat-bagan-turnamen-badminton-sistem-gugur/</loc><lastmod>2026-10-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://skorton.pandigi.id/panduan/cara-menghitung-skor-badminton/</loc><lastmod>2026-10-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://skorton.pandigi.id/panduan/interval-badminton/</loc><lastmod>2026-10-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://skorton.pandigi.id/panduan/kartu-skor-badminton/</loc><lastmod>2026-10-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://skorton.pandigi.id/panduan/rekomendasi-aplikasi-pencatat-skor-badminton/</loc><lastmod>2026-10-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
