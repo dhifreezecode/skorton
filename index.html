@@ -83,6 +83,18 @@
     @media(max-width:560px){.match-page{padding-top:12px}.match-page .match-court-head{min-height:30px}.service-route{gap:5px;max-width:calc(100% - 78px)}.service-route-icon{width:19px;height:19px}.service-route-icon svg{width:17px;height:17px}.service-route strong{max-width:84px;font-size:10px}.service-route i{font-size:14px}.service-route b{font-size:8px}.match-page .match-court{height:178px}.match-page .teams{height:154px}.match-page .team-card{grid-template-rows:auto minmax(44px,1fr) auto;padding-top:8px}.match-page .score-number{font-size:clamp(56px,18vw,72px);padding:0 0 2px;transform:translateY(-7px)}}
     .section{padding:32px 0}
     .home-end{margin-top:24px;margin-bottom:36px}
+    /* Keep every primary scoring/action control on the final volt palette, even when a browser forces dark styling. */
+    .nav-btn.primary,.btn-main,.score-add,.play-match{
+      background-color:var(--volt)!important;background-image:none!important;border-color:var(--volt)!important;
+      color:var(--volt-ink)!important;-webkit-text-fill-color:var(--volt-ink)!important;
+      -webkit-appearance:none;appearance:none;color-scheme:light;forced-color-adjust:none;box-shadow:none!important
+    }
+    .nav-btn.primary:hover,.nav-btn.primary:focus-visible,.btn-main:hover,.btn-main:focus-visible,.score-add:hover,.score-add:focus-visible,.play-match:hover,.play-match:focus-visible{
+      background-color:#d5ff63!important;background-image:none!important;border-color:#d5ff63!important;color:var(--volt-ink)!important;-webkit-text-fill-color:var(--volt-ink)!important
+    }
+    .nav-btn.primary:active,.btn-main:active,.score-add:active,.play-match:active{
+      background-color:#baf020!important;background-image:none!important;border-color:#baf020!important;color:var(--volt-ink)!important;-webkit-text-fill-color:var(--volt-ink)!important
+    }
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
     @media print{.topbar,.result-actions,.footer{display:none!important}body{background:#fff}.result-card{box-shadow:none}}
   
