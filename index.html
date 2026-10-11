@@ -77,6 +77,9 @@
       .match-page .match-court-panel{flex:1 1 auto;display:flex;flex-direction:column;min-height:0}
       .match-page .match-court{flex:1 1 auto;height:auto;min-height:200px;max-height:46vh;max-height:46dvh}
     }
+    /* Production: rapatkan jarak antar-bagian landing page. */
+    .section{padding:52px 0}
+    .home-end{margin-top:28px;margin-bottom:48px}
   </style>
 </head>
 <body>
@@ -92,7 +95,7 @@
   var state={screen:'home',match:null,history:[],timerId:null,tournament:null,pendingTMatch:null,intervalTimerId:null,intervalEndsAt:null,intervalResumeRunning:false};
   var LS_KEY='skorton.v1';
   function persist(){try{var snap={v:1,history:(state.history||[]).slice(0,60),tournament:state.tournament||null,match:(state.match&&!state.match.complete)?state.match:null};localStorage.setItem(LS_KEY,JSON.stringify(snap))}catch(e){}}
-  function restore(){try{var raw=localStorage.getItem(LS_KEY);if(!raw)return;var snap=JSON.parse(raw);if(!snap||snap.v!==1)return;if(snap.history&&snap.history.length)state.history=snap.history;if(snap.tournament)state.tournament=snap.tournament;if(snap.match&&!snap.match.complete){state.match=snap.match;state.match.running=false;state.match.lastTick=Date.now();state.intervalEndsAt=null;state.intervalTimerId=null;state.screen='score';ensureTimer()}}catch(e){}}
+  function restore(){try{var raw=localStorage.getItem(LS_KEY);if(!raw)return;var snap=JSON.parse(raw);if(!snap||snap.v!==1)return;if(snap.history&&snap.history.length)state.history=snap.history;if(snap.tournament)state.tournament=snap.tournament;if(snap.match&&!snap.match.complete&&!isLiveDisplay){state.match=snap.match;state.match.running=false;state.match.lastTick=Date.now();state.intervalEndsAt=null;state.intervalTimerId=null;state.screen='score';ensureTimer()}}catch(e){}}
   var isLiveDisplay=window.location.hash==='#live-display',liveChannel=null,displayWindow=null;
   function activeMatchSnapshot(){return state.match&&!state.match.complete?JSON.parse(JSON.stringify(state.match)):null}
   function broadcastMatch(){if(liveChannel)liveChannel.postMessage({type:'skorton-live-state',match:activeMatchSnapshot()})}
