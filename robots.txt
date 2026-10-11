@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://skorton.pandigi.id/sitemap.xml
